@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package mini_kube;
+
+option go_package = "github.com/mini-k8/mini-k8/internal/proto";
+
+service WorkerService {
+  rpc Deploy(DeployRequest) returns (DeployResponse);
+}
+
+message DeployRequest {
+  string image = 1;
+}
+
+message DeployResponse {
+  string status = 1;
+  string container_id = 2;
+  string message = 3;
+}
