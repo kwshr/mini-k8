@@ -148,7 +148,7 @@ Each struct does exactly one thing:
 
 ┌─────────────────────────────────────────────────────────┐
 │                       worker                            │
-│  Worker          { runner docker.Runner }                │
+│  Worker          { runner docker.Runner }               │
 │    .HandleRun(w, r)                                     │
 │    .Start(addr)                                         │
 └─────────────────────────────────────────────────────────┘
